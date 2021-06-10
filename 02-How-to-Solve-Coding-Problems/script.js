@@ -51,6 +51,58 @@ function containCommonItem2(arr1, arr2) {
 } // O(m+n)
 const result2 = containCommonItem2(array1, array2);
 console.log(result2);
+
+// 1.5 Testing
 ////////////////////////////////////////////////
 
 // NOTE Interview Qs 2 *Google: Has Pair with Sum
+// 2.1 Key points
+// Given an ascend-order array, find pair matching with given sum
+// Example 1: [1,2,3,9] Sum=8
+// Example 2: [1,2,4,4] Sum=8
+
+// 2.2 Inputs/Outputs
+// input: array
+// output: true/false
+
+// 2.3 Bad solution
+// O(n^2)
+function hasPairWithSum1(arr, sum) {
+  for (let i of arr) {
+    for (let j of arr) {
+      if (i + j === sum) return true;
+    }
+  }
+  return false;
+}
+
+// 2.4 Better solution
+function hasPairWithSum2(arr, sum) {
+  let low = 0;
+  let high = arr.length - 1;
+  while (low < high) {
+    let currentSum = arr[low] + arr[high];
+    if (currentSum === sum) return true;
+    low++;
+  }
+  return false;
+} // O(n)
+
+// 2.5 Testing
+// const result = hasPairWithSum2([1, 2, 4, 4], 8);
+// const result = hasPairWithSum2([1, -2, 3, 0, 5], 0);
+// console.log(result);
+
+// 2.6 Further challenge: What if the given array is not sorted?
+function hasPairWithSum3(arr, sum) {
+  // Create a Set object with complements
+  const mySet = new Set();
+  for (let i = 0; i < arr.length; i++) {
+    if (mySet.has(arr[i])) return true;
+    mySet.add(sum - arr[i]);
+  }
+  return false;
+}
+// 2.7 Further Testing
+// const result = hasPairWithSum3([1, 2, 4, 4], 8);
+// console.log(result);
