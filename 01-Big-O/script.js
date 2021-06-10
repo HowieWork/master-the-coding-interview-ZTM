@@ -191,7 +191,7 @@ function boo(n) {
     console.log('boo!');
   }
 }
-boo([1, 2, 3, 4, 5]); // O(1)
+// boo([1, 2, 3, 4, 5]); // O(1)
 
 function arrayOfHiNTimes(n) {
   // Create a new Data Structure: O(n)
