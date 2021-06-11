@@ -76,16 +76,47 @@ class MyArray {
   }
 }
 
-const newArray = new MyArray();
-newArray.push('hi');
-newArray.push('you');
-newArray.push('!');
-newArray.delete(0);
-newArray.delete(1);
-newArray.push('are');
-newArray.push('nice');
-console.log(newArray);
+// const newArray = new MyArray();
+// newArray.push('hi');
+// newArray.push('you');
+// newArray.push('!');
+// newArray.delete(0);
+// newArray.delete(1);
+// newArray.push('are');
+// newArray.push('nice');
+// console.log(newArray);
 //////////////////////////////////////////
 
 // NOTE 4. Strings and Arrays *common interview question
 // String question? Turn it into an Array *String.prototype.split()
+// Interview Q: Create a function that reverses a string:
+// 'Hi My name is' --> 'si eman yM iH'
+function reverseString(str) {
+  // IMPORTANT Check input: is there an input?; typeof === 'string'; string.length > 1
+  if (!str || typeof str === 'string' || str.length < 2)
+    return 'Please provide the correct input.';
+
+  // Convert string to array
+  const arr = str.split('');
+
+  // Reverse the array
+  const reversedArr = arr.reverse();
+
+  // Convert reversed array to string and return
+  const reversedStr = reversedArr.join('');
+  return reversedStr;
+}
+const strExample = 'Hi My name is';
+reverseString(strExample);
+
+// *Optional solution
+function reverseString2(str) {
+  let newString = '';
+  for (let i = str.length - 1; i >= 0; i--) {
+    newString += str[i];
+  }
+  return newString;
+}
+//////////////////////////////////////////
+
+// NOTE 5.
