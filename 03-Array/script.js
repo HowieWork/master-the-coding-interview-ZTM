@@ -123,6 +123,7 @@ function reverseString2(str) {
 // Given two sorted arrays, create a function to merge them and return one sorted array
 // Example: [0,3,4,31], [4,6,30] --> [0,3,4,4,6,30,31]
 function mergeSortedArrays(arr1, arr2) {
+  // Check input
   // Combine two arrays into one array
   const mergedArray = arr1.concat(arr2);
   // Sort combined array and return sorted array
@@ -136,3 +137,21 @@ function mergeSortedArrays(arr1, arr2) {
   }
   return mergedArray;
 }
+
+//////////////////////////////////////////
+
+// NOTE 6. MORE Array interview questions
+// Leetcode
+
+//////////////////////////////////////////
+
+// NOTE 7. When to use Array?
+// Pros:
+// (1) Fast lookups
+// (2) Fast push/pop
+// (3) Ordered
+
+// Cons:
+// (1) Slow inserts
+// (2) Slow deletes
+// (3) Fixed size * if using static array
