@@ -142,6 +142,52 @@ function mergeSortedArrays(arr1, arr2) {
 
 // NOTE 6. MORE Array interview questions
 // Leetcode
+// 6.1 Two Sum
+// Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+
+// You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+// You can return the answer in any order.
+
+// input: numArray, target
+// output: [index, index]
+
+// Bad solution: O(n^2)
+const twoSum1 = function (nums, target) {
+  // check input: existing? ; typeof; length>1
+
+  // check all pairs possibility and compare with target
+  const length = nums.length;
+  for (let i = 0; i < length; i++) {
+    for (let j = 0; j < length; j++) {
+      if (j !== i) {
+        // if there is a match, then return index
+        if (nums[i] + nums[j] === target) {
+          console.log([i, j]);
+          return [i, j];
+        }
+      }
+    }
+  }
+};
+// twoSum1([2, 7, 11, 15], 9);
+// twoSum1([3, 2, 4], 6);
+// twoSum1([3, 3], 6);
+
+// Better solution: O(n)
+const twoSum2 = function (nums, target) {
+  // complements
+  const complements = {};
+  for (let i = 0; i < nums.length; i++) {
+    if (complements[nums[i]] >= 0) {
+      return [complements[nums[i]], i];
+    }
+    complements[target - nums[i]] = i;
+  }
+};
+twoSum2([2, 7, 11, 15], 9);
+twoSum2([3, 2, 4], 6);
+twoSum2([3, 3], 6);
 
 //////////////////////////////////////////
 
