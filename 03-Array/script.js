@@ -119,4 +119,20 @@ function reverseString2(str) {
 }
 //////////////////////////////////////////
 
-// NOTE 5.
+// NOTE 5. Interview Q: Merge sorted arrays
+// Given two sorted arrays, create a function to merge them and return one sorted array
+// Example: [0,3,4,31], [4,6,30] --> [0,3,4,4,6,30,31]
+function mergeSortedArrays(arr1, arr2) {
+  // Combine two arrays into one array
+  const mergedArray = arr1.concat(arr2);
+  // Sort combined array and return sorted array
+  const length = mergedArray.length;
+  for (let i = 0; i < length - 1; i++) {
+    if (mergedArray[i] > mergedArray[i + 1]) {
+      let temp = mergedArray[i];
+      mergedArray[i] = mergedArray[i + 1];
+      mergedArray[i + 1] = temp;
+    }
+  }
+  return mergedArray;
+}
