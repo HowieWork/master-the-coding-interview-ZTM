@@ -141,7 +141,7 @@ function mergeSortedArrays(arr1, arr2) {
 //////////////////////////////////////////
 
 // NOTE 6. MORE Array interview questions
-// Leetcode
+// *Leetcode
 // 6.1 Two Sum
 // Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 
@@ -188,7 +188,6 @@ const twoSum2 = function (nums, target) {
 twoSum2([2, 7, 11, 15], 9);
 twoSum2([3, 2, 4], 6);
 twoSum2([3, 3], 6);
-
 //////////////////////////////////////////
 
 // NOTE 7. When to use Array?
