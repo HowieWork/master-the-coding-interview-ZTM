@@ -49,17 +49,56 @@ class HashTable {
 }
 
 const myHashTable = new HashTable(50);
-console.log(myHashTable);
 myHashTable.set('grapes', 10000);
 myHashTable.set('apples', 20000);
 myHashTable.set('banana', 30000);
-console.log(myHashTable.keys());
+// console.log(myHashTable.keys());
 
-// Time complexity: O(1) * NO COLLISION
+// IMPORTANT Time complexity: O(1) * NO COLLISION
 // Hash Tables
 // search O(1)
 // insert O(1)
 // lookup O(1)
 // delete O(1)
 // con: NO ORDER!!!
+////////////////////////////////////////////////////////////
+// NOTE Interview Q * Google : First Recurring Character
+//Given an array = [2,5,1,2,3,5,1,2,4]:
+//It should return 2
+
+//Given an array = [2,1,1,2,3,5,1,2,4]:
+//It should return 1
+
+//Given an array = [2,3,4,5]:
+//It should return undefined
+
+// Input (array of numbers) --> Output (first recurring char)
+
+function firstRecurringCharacter(input) {
+  // 1. Input validation
+  // *Check if input is empty array (and some other...)
+  if (!input.length) return undefined;
+
+  // 2. Loop input
+  // Add all items as separate keys along with a initial value 1 if doesn't exist
+  // Add 1 to value if exists
+  // 2.1 Declare keysObj
+  const keysObj = {};
+  // 2.2 Loop input
+  for (let i of input) {
+    if (keysObj[i]) {
+      return i;
+    } else {
+      keysObj[i] = true;
+    }
+  }
+} // O(n)
+console.log(firstRecurringCharacter([2, 5, 1, 2, 3, 5, 1, 2, 4]));
+console.log(firstRecurringCharacter([2, 1, 1, 2, 3, 5, 1, 2, 4]));
+console.log(firstRecurringCharacter([2, 3, 4, 5]));
+console.log(firstRecurringCharacter([2, 5, 5, 2, 3, 5, 1, 2, 4]));
+
+//Bonus... What if we had this:
+// [2,5,5,2,3,5,1,2,4]
+// return 5 because the pairs are before 2,2
 ////////////////////////////////////////////////////////////
