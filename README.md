@@ -11,12 +11,14 @@ Course link:
 
 ## Resource
 
-1. [Frontend Interview Handbook](https://frontendinterviewhandbook.com/)
+1. [A Common-Sense Guide to Data Structure and Algorithms](https://github.com/HowieWork/a-common-sense-guide-to-data-structure-and-algorithms) \*I picked this book as a suplement reading for this course.
 
-2. [Frontend Practical Coding Questions](https://leetcode.com/discuss/interview-question/742791/front-end-interview-questions)
+2. [Frontend Interview Handbook](https://frontendinterviewhandbook.com/)
 
-3. [Frontend Developer Interview Questions](https://github.com/h5bp/Front-end-Developer-Interview-Questions)
+3. [Frontend Practical Coding Questions](https://leetcode.com/discuss/interview-question/742791/front-end-interview-questions)
 
-4. [JavaScript Interview Questions](https://github.com/sudheerj/javascript-interview-questions)
+4. [Frontend Developer Interview Questions](https://github.com/h5bp/Front-end-Developer-Interview-Questions)
 
-5. [React Interview Questions](https://github.com/sudheerj/reactjs-interview-questions)
+5. [JavaScript Interview Questions](https://github.com/sudheerj/javascript-interview-questions)
+
+6. [React Interview Questions](https://github.com/sudheerj/reactjs-interview-questions)
